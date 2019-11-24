@@ -14,6 +14,11 @@
 		9B4B2ACE238A853D00AA7208 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B2ACC238A853D00AA7208 /* LaunchScreen.storyboard */; };
 		9B4B2AD9238A853D00AA7208 /* coloring_bookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AD8238A853D00AA7208 /* coloring_bookTests.swift */; };
 		9B4B2AE4238A853D00AA7208 /* coloring_bookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AE3238A853D00AA7208 /* coloring_bookUITests.swift */; };
+		9B4B2AF2238A85EF00AA7208 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AF1238A85EF00AA7208 /* Block.swift */; };
+		9B4B2AF4238A865100AA7208 /* BlockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AF3238A865100AA7208 /* BlockCollectionViewCell.swift */; };
+		9B4B2AF6238A869200AA7208 /* NewPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AF5238A869200AA7208 /* NewPictureViewController.swift */; };
+		9B4B2AF8238A86A300AA7208 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AF7238A86A300AA7208 /* Picture.swift */; };
+		9B4B2AFA238A86CD00AA7208 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AF9238A86CD00AA7208 /* PictureCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		9B4B2ADF238A853D00AA7208 /* coloring_bookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coloring_bookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4B2AE3238A853D00AA7208 /* coloring_bookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coloring_bookUITests.swift; sourceTree = "<group>"; };
 		9B4B2AE5238A853D00AA7208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4B2AF1238A85EF00AA7208 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		9B4B2AF3238A865100AA7208 /* BlockCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B4B2AF5238A869200AA7208 /* NewPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPictureViewController.swift; sourceTree = "<group>"; };
+		9B4B2AF7238A86A300AA7208 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		9B4B2AF9238A86CD00AA7208 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 			children = (
 				9B4B2AC3238A853900AA7208 /* AppDelegate.swift */,
 				9B4B2AC5238A853900AA7208 /* ViewController.swift */,
+				9B4B2AF1238A85EF00AA7208 /* Block.swift */,
+				9B4B2AF3238A865100AA7208 /* BlockCollectionViewCell.swift */,
+				9B4B2AF5238A869200AA7208 /* NewPictureViewController.swift */,
+				9B4B2AF7238A86A300AA7208 /* Picture.swift */,
+				9B4B2AF9238A86CD00AA7208 /* PictureCollectionViewCell.swift */,
 				9B4B2AC7238A853900AA7208 /* Main.storyboard */,
 				9B4B2ACA238A853D00AA7208 /* Assets.xcassets */,
 				9B4B2ACC238A853D00AA7208 /* LaunchScreen.storyboard */,
@@ -256,7 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4B2AFA238A86CD00AA7208 /* PictureCollectionViewCell.swift in Sources */,
+				9B4B2AF2238A85EF00AA7208 /* Block.swift in Sources */,
+				9B4B2AF8238A86A300AA7208 /* Picture.swift in Sources */,
+				9B4B2AF6238A869200AA7208 /* NewPictureViewController.swift in Sources */,
 				9B4B2AC6238A853900AA7208 /* ViewController.swift in Sources */,
+				9B4B2AF4238A865100AA7208 /* BlockCollectionViewCell.swift in Sources */,
 				9B4B2AC4238A853900AA7208 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
