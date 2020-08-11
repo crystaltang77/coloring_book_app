@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0EC75D238B032900D71DFE /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0EC75C238B032900D71DFE /* PictureViewController.swift */; };
 		9B4B2AC4238A853900AA7208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AC3238A853900AA7208 /* AppDelegate.swift */; };
 		9B4B2AC6238A853900AA7208 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B2AC5238A853900AA7208 /* ViewController.swift */; };
 		9B4B2AC9238A853900AA7208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B2AC7238A853900AA7208 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0EC75C238B032900D71DFE /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		9B4B2AC0238A853900AA7208 /* coloring_book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coloring_book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4B2AC3238A853900AA7208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4B2AC5238A853900AA7208 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				9B4B2AF3238A865100AA7208 /* BlockCollectionViewCell.swift */,
 				9B4B2AF5238A869200AA7208 /* NewPictureViewController.swift */,
 				9B4B2AF7238A86A300AA7208 /* Picture.swift */,
+				9B0EC75C238B032900D71DFE /* PictureViewController.swift */,
 				9B4B2AF9238A86CD00AA7208 /* PictureCollectionViewCell.swift */,
 				9B4B2AC7238A853900AA7208 /* Main.storyboard */,
 				9B4B2ACA238A853D00AA7208 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4B2AFA238A86CD00AA7208 /* PictureCollectionViewCell.swift in Sources */,
+				9B0EC75D238B032900D71DFE /* PictureViewController.swift in Sources */,
 				9B4B2AF2238A85EF00AA7208 /* Block.swift in Sources */,
 				9B4B2AF8238A86A300AA7208 /* Picture.swift in Sources */,
 				9B4B2AF6238A869200AA7208 /* NewPictureViewController.swift in Sources */,

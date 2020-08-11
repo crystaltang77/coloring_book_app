@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var collectionView: UICollectionView!
-    var pictureArray: [Picture]!
+    var pictureArray: [Picture] = []
     
     let pictureCellReuseIdentifier = "pictureCellReuseIdentifier"
     let headerReuseIdentifier = "headerReuseIdentifier"
@@ -28,7 +28,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         let pic = Picture(name: "Pic", preview: "pic", colorDictionary: [:], blueprint: [])
-        pictureArray = [pic, pic, pic, pic, pic, pic, pic, pic, pic, pic, pic, pic]
+        pictureArray = [pic, pic, pic, pic]
+        
+        print("inital")
+        dump(pictureArray)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -53,6 +56,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             ])
+    }
+    
+    func addPicture(pic: Picture!){
+        pictureArray.append(pic)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,8 +88,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @objc func pushNewPictureViewController() {
+        print("pushNewPictureVC before")
+        dump(pictureArray)
         let newPictureViewController = NewPictureViewController()
         navigationController?.pushViewController(newPictureViewController, animated: true)
+        print("pushNewPictureVC after")
+        dump(pictureArray)
     }
     
     //    func setNavigationBar() {

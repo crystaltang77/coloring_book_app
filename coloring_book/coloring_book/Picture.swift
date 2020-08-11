@@ -12,7 +12,7 @@ import Foundation
 
 class Picture {
     var name: String
-    var preview: String
+    var preview: String //filename
     var colorDictionary: [Int: UIColor] = [:]
     var blueprint : [Block]
     var numColors : Int
