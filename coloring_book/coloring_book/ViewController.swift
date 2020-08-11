@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var collectionView: UICollectionView!
-    var pictureArray: [Picture] = []
     
     let pictureCellReuseIdentifier = "pictureCellReuseIdentifier"
     let headerReuseIdentifier = "headerReuseIdentifier"
@@ -28,10 +27,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         let pic = Picture(name: "Pic", preview: "pic", colorDictionary: [:], blueprint: [])
-        pictureArray = [pic, pic, pic, pic]
+        GlobalVariables.pictureArray = [pic, pic, pic, pic]
         
         print("inital")
-        dump(pictureArray)
+        dump(GlobalVariables.pictureArray)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -49,6 +48,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         setUpConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+    
     func setUpConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -58,26 +61,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ])
     }
     
-    func addPicture(pic: Picture!){
-        pictureArray.append(pic)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: pictureCellReuseIdentifier, for: indexPath) as! PictureCollectionViewCell
-        let picture = pictureArray[indexPath.item]
+        let picture = GlobalVariables.pictureArray[indexPath.item]
         cell.configure(with: picture)
         cell.setNeedsUpdateConstraints()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pictureArray.count
+        return GlobalVariables.pictureArray.count
     }
     
     //cell is deleted, NEEDS TO BE CHANGED
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        pictureArray.remove(at: indexPath.item)
+        GlobalVariables.pictureArray.remove(at: indexPath.item)
         collectionView.reloadData()
     }
     
@@ -89,11 +88,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @objc func pushNewPictureViewController() {
         print("pushNewPictureVC before")
-        dump(pictureArray)
+        dump(GlobalVariables.pictureArray)
         let newPictureViewController = NewPictureViewController()
         navigationController?.pushViewController(newPictureViewController, animated: true)
         print("pushNewPictureVC after")
-        dump(pictureArray)
+        dump(GlobalVariables.pictureArray)
     }
     
     //    func setNavigationBar() {

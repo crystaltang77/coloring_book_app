@@ -23,7 +23,7 @@ class NewPictureViewController: UIViewController, UICollectionViewDelegate, UICo
         title = "New Picture"
             
         print("viewDidLoad")
-        dump(ViewController().pictureArray)
+        dump(GlobalVariables.pictureArray)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(dismissViewControllerAndSave))
         
@@ -97,12 +97,11 @@ class NewPictureViewController: UIViewController, UICollectionViewDelegate, UICo
 //        takeScreenshotAndSave()
         // add picture to array
         print("save before")
-        dump(ViewController().pictureArray)
+        dump(GlobalVariables.pictureArray)
         let picture = Picture(name: "NewPic", preview: "pic", colorDictionary: [:], blueprint: [])
-        let viewController = ViewController()
-        viewController.addPicture(pic: picture)
+        GlobalVariables.pictureArray.append(picture)
         print("save after")
-        dump(viewController.pictureArray)
+        dump(GlobalVariables.pictureArray)
         // goes back to home page
         self.navigationController?.popViewController(animated: true)
     }
